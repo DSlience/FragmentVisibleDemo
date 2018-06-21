@@ -23,4 +23,8 @@ public class MainActivity extends AppCompatActivity {
     public void goManagerFragment(View view) {
         startActivity(new Intent(this, ManagerFragmentActivity.class));
     }
+
+    public void goXmlFragment(View view) {
+        startActivity(new Intent(this, XmlFragmentActivity.class));
+    }
 }
