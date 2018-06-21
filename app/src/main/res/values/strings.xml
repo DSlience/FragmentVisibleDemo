@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">FragmentVIsibleDemo</string>
+    <string name="app_name">FragmentVisibleDemo</string>
+
+
+    <string name="news">资讯</string>
+    <string name="community">社区</string>
+    <string name="car">选车</string>
+    <string name="me">个人</string>
+
 </resources>

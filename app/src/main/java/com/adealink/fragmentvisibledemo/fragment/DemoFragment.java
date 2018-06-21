@@ -11,7 +11,7 @@ import butterknife.BindView;
 /**
  * Created by Xuefu_Du on 2018/6/21.
  */
-public class DemoFragment extends BaseVisibleFragment {
+public class DemoFragment extends BaseHiddenFragment {
 
     private static final String FRAGMENT_TYPE_MARK = "fragment_type_mark";
 

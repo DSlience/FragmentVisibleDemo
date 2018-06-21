@@ -19,6 +19,8 @@
 
         <activity android:name=".activity.ViewPagerFragmentActivity" />
 
+        <activity android:name=".activity.ManagerFragmentActivity" />
+
     </application>
 
 </manifest>

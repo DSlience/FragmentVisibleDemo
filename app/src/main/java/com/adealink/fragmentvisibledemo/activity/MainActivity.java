@@ -20,4 +20,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, ViewPagerFragmentActivity.class));
     }
 
+    public void goManagerFragment(View view) {
+        startActivity(new Intent(this, ManagerFragmentActivity.class));
+    }
 }

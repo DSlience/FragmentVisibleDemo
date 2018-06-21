@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_tab_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_g7"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <!--资讯-->
+    <RelativeLayout
+        android:id="@+id/news_tab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:minHeight="@dimen/dimen_49dp"
+        android:onClick="onTabSelect">
+
+        <TextView
+            android:id="@+id/news_tab_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/news"
+            android:textColor="@drawable/color_c1_g1_selector"
+            android:textSize="@dimen/dimen_15sp" />
+    </RelativeLayout>
+
+    <!--社区-->
+    <RelativeLayout
+        android:id="@+id/community_tab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:minHeight="@dimen/dimen_49dp"
+        android:onClick="onTabSelect">
+
+        <TextView
+            android:id="@+id/community_tab_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/community"
+            android:textColor="@drawable/color_c1_g1_selector"
+            android:textSize="@dimen/dimen_15sp" />
+    </RelativeLayout>
+
+    <!--选车-->
+    <RelativeLayout
+        android:id="@+id/car_tab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:minHeight="@dimen/dimen_49dp"
+        android:onClick="onTabSelect">
+
+        <TextView
+            android:id="@+id/car_tab_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/car"
+            android:textColor="@drawable/color_c1_g1_selector"
+            android:textSize="@dimen/dimen_15sp" />
+    </RelativeLayout>
+
+    <!--个人-->
+    <RelativeLayout
+        android:id="@+id/me_tab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:minHeight="@dimen/dimen_49dp"
+        android:onClick="onTabSelect">
+
+        <TextView
+            android:id="@+id/me_tab_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/me"
+            android:textColor="@drawable/color_c1_g1_selector"
+            android:textSize="@dimen/dimen_15sp" />
+    </RelativeLayout>
+
+</LinearLayout>
