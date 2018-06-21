@@ -14,18 +14,18 @@ public abstract class BaseHiddenFragment extends BaseFragment {
     protected boolean mPageStart;//pageStart <-> pageEnd
     protected boolean mHidden;
 
-    public void setFlagStr(String flag) {
+    protected void setFlagStr(String flag) {
         mFragmentFlag = flag;
     }
 
-    private String getFlagStr() {
+    protected String getFlagStr() {
         return mFragmentFlag;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        LogUtil.w("d_slience", getFlagStr() + "-onResume-onResume");
+//        LogUtil.w("d_slience", getFlagStr() + "-onResume-onResume");
         mOnPause = false;
         pageStartEndCompute();
     }
@@ -33,7 +33,7 @@ public abstract class BaseHiddenFragment extends BaseFragment {
     @Override
     public void onPause() {
         super.onPause();
-        LogUtil.w("d_slience", getFlagStr() + "-onPause-onPause");
+//        LogUtil.w("d_slience", getFlagStr() + "-onPause-onPause");
         mOnPause = true;
         pageStartEndCompute();
     }
@@ -41,15 +41,9 @@ public abstract class BaseHiddenFragment extends BaseFragment {
     @Override
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
-        LogUtil.w("d_slience", getFlagStr() + "-hidden:" + hidden);
+//        LogUtil.w("d_slience", getFlagStr() + "-hidden:" + hidden);
         mHidden = hidden;
         pageStartEndCompute();
-    }
-
-    @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
-        LogUtil.w("d_slience", getFlagStr() + "-isVisibleToUser:" + isVisibleToUser);
     }
 
     /**
@@ -57,7 +51,7 @@ public abstract class BaseHiddenFragment extends BaseFragment {
      */
     protected void pageStartEndCompute() {
         boolean pageStart = false;
-        if (!mOnPause && mHidden) {
+        if (!mOnPause && !mHidden) {
             pageStart = true;
         }
         if (pageStart == mPageStart) {
@@ -73,12 +67,12 @@ public abstract class BaseHiddenFragment extends BaseFragment {
 
     //页面起始-用户可见
     protected void onFragmentPageStart() {
-//        LogUtil.w("d_slience", getFlagStr() + "-onFragmentPageStart");
+        LogUtil.w("d_slience", getFlagStr() + "-onFragmentPageStart");
     }
 
     //页面结束-用户不可见
     protected void onFragmentPageEnd() {
-//        LogUtil.w("d_slience", getFlagStr() + "-onFragmentPageEnd");
+        LogUtil.w("d_slience", getFlagStr() + "-onFragmentPageEnd");
     }
 
 }

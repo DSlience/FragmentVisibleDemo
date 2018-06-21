@@ -16,7 +16,10 @@ public class DemoFmMannager extends BaseFmManager {
         super(fa);
     }
 
-    public void addFragment(Fragment fragment, String fgTag) {
+    public void addFragment(@NonNull Fragment fragment, String fgTag) {
+        if (fragment.isAdded()) {
+            return;
+        }
         FragmentTransaction transaction = mFM.beginTransaction();
         transaction.add(R.id.content_layout, fragment, fgTag);
         transaction.commit();

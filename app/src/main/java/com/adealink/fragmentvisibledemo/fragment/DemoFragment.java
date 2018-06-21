@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.widget.TextView;
 
+import com.adealink.baselib.utils.LogUtil;
 import com.adealink.fragmentvisibledemo.R;
 
 import butterknife.BindView;
@@ -35,6 +36,8 @@ public class DemoFragment extends BaseHiddenFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+//        LogUtil.w("d_slience", getFlagStr() + "DemoFragment-onActivityCreated");
 
         Bundle bundle = getArguments();
         if (bundle != null) {

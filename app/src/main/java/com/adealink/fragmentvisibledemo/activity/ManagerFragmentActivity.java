@@ -73,20 +73,15 @@ public class ManagerFragmentActivity extends BaseActivity {
         if (mCurrTabIndex >= 0 && mCurrTabIndex < mTabs.length) {
             Fragment currFragment = mFragments[mCurrTabIndex];
             mFmMannager.hide(currFragment);
-//            mFmMannager.removeFragment(currFragment);
         }
         //显示新的
         Fragment goFragment = mFragments[tabIndex];
         if (goFragment == null) {
             goFragment = initFragment(tabIndex);
-        }
-        mFragments[tabIndex] = goFragment;
-        if (!goFragment.isAdded()) {
+            mFragments[tabIndex] = goFragment;
             mFmMannager.addFragment(goFragment, getFmFlag(tabIndex));
         }
-        if (goFragment.isHidden()) {
-            mFmMannager.show(goFragment);
-        }
+        mFmMannager.show(goFragment);
 
         //变换Tab状态
         switchTab(tabIndex);

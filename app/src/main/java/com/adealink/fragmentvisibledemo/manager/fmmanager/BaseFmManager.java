@@ -6,8 +6,6 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
-import java.util.List;
-
 /**
  * Created by Xuefu_Du on 2018/6/21.
  */
@@ -21,16 +19,16 @@ public class BaseFmManager {
         mFM = fa.getSupportFragmentManager();
     }
 
-    public void hide(Fragment fragment) {
-        if (fragment == null) {
-            return;
-        }
+    public void hide(@NonNull Fragment fragment) {
         FragmentTransaction transaction = mFM.beginTransaction();
         transaction.hide(fragment);
         transaction.commit();
     }
 
-    public void show(Fragment fragment) {
+    public void show(@NonNull Fragment fragment) {
+        if (!fragment.isHidden()) {
+            return;
+        }
         FragmentTransaction transaction = mFM.beginTransaction();
         transaction.show(fragment);
         transaction.commit();
