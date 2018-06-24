@@ -35,4 +35,8 @@ public class MainActivity extends AppCompatActivity {
     public void goImageDemo(View view) {
         startActivity(new Intent(this, ImgDemoActivity.class));
     }
+
+    public void goTvClickDemo(View view) {
+        startActivity(new Intent(this, TvClickDemoActivity.class));
+    }
 }
