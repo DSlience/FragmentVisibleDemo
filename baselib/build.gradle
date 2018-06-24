@@ -28,6 +28,7 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'
 
+    api 'com.android.support:design:26.1.0'
     //mosby
     api 'com.hannesdorfmann.mosby:mvp:2.0.0'
     api 'com.hannesdorfmann.mosby:viewstate:2.0.0'

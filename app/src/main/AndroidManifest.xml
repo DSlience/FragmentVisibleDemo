@@ -32,6 +32,8 @@
 
         <activity android:name=".activity.TvClickDemoActivity" />
 
+        <activity android:name=".activity.RVItemClickDemoActivity" />
+
     </application>
 
 </manifest>

@@ -39,4 +39,8 @@ public class MainActivity extends AppCompatActivity {
     public void goTvClickDemo(View view) {
         startActivity(new Intent(this, TvClickDemoActivity.class));
     }
+
+    public void goRVItemClickDemo(View view) {
+        startActivity(new Intent(this, RVItemClickDemoActivity.class));
+    }
 }

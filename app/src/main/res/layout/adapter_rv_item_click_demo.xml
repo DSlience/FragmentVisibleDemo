@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/gap_start_end"
+    android:paddingRight="@dimen/gap_start_end"
+    android:paddingTop="@dimen/dimen_12dp">
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#30000000"
+        android:lineSpacingExtra="@dimen/dimen_5dp"
+        android:minHeight="@dimen/dimen_60dp"
+        android:text="车型：奥迪A4L 2017款 40TFSI 风尚型"
+        android:textColor="@color/color_g1"
+        android:textSize="@dimen/dimen_16sp" />
+
+    <!--网格图片-->
+    <com.adealink.baselib.customview.BlankClickRV
+        android:id="@+id/pic_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_c1"
+        android:nestedScrollingEnabled="false" />
+
+</LinearLayout>
