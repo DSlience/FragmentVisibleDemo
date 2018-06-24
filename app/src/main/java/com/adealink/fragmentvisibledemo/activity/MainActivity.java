@@ -27,4 +27,8 @@ public class MainActivity extends AppCompatActivity {
     public void goXmlFragment(View view) {
         startActivity(new Intent(this, XmlFragmentActivity.class));
     }
+
+    public void goObjectAnim(View view) {
+        startActivity(new Intent(this, PropertyAnimDemoActivity.class));
+    }
 }
