@@ -31,4 +31,8 @@ public class MainActivity extends AppCompatActivity {
     public void goObjectAnim(View view) {
         startActivity(new Intent(this, PropertyAnimDemoActivity.class));
     }
+
+    public void goImageDemo(View view) {
+        startActivity(new Intent(this, ImgDemoActivity.class));
+    }
 }

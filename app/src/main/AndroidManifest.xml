@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.adealink.fragmentvisibledemo">
 
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,6 +27,8 @@
         <activity android:name=".activity.XmlFragmentActivity" />
 
         <activity android:name=".activity.PropertyAnimDemoActivity" />
+
+        <activity android:name=".activity.ImgDemoActivity" />
 
     </application>
 
